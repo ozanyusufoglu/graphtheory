@@ -1,8 +1,5 @@
 const d3 = require('d3');
-require('../pipes.js');
-var smooth = 1000;
-var period = 1000;
-
+require('./logger');
   var dataset = [{
         foo: 20,
         boo: 30,
@@ -21,8 +18,8 @@ var period = 1000;
 ];
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
-var svg = d3.select("#chartarea").append("svg")
-    .attr("width", 1000)
+var svg = d3.select("body").append("svg")
+    .attr("width", 2000)
     .attr("height", 1000)
 
 var circles = svg.selectAll("circles")
@@ -42,7 +39,7 @@ setInterval(function(){
  }
     update();
     console.log(circles);
-},period);
+},1000);
 
 function update(){
 
@@ -50,7 +47,7 @@ function update(){
 
  circles.data(dataset).enter()
           .append("circle")
-          .transition().ease(d3.easeLinear).duration(smooth)
+          .transition().ease(d3.easeLinear).duration(1000)
           .attr("r", function(d){return d.foo})
           .attr("fill", function(d,i){return color(i)})
           .attr("cx", function(d){ return Math.random() * d.foo * 20 })

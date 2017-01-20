@@ -1,0 +1,51 @@
+
+button#advance {
+  margin: 10px;
+
+}
+button#stop {
+  margin: 10px;
+}
+
+button#add {
+ margin: 10px;
+}
+button#remove {
+  margin: 10px;
+
+}
+#dashBoard {
+  width: 100px;
+  height: 500px;
+  background-color: grey;
+  margin: auto;
+  float: right;
+}
+
+#chartArea {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  float: left;
+}
+
+g.nodes {
+
+fill : grey;
+stroke: white;
+stroke-width:5;
+opacity: 0.5;
+}
+
+g.links {
+opacity: 0.6;
+stroke : grey;
+stroke-width :3;
+opacity: 0.5;
+}
+
+text {
+  font-size: 20px;
+  color: grey;
+  font-family: 'Raleway', sans-serif;
+}
