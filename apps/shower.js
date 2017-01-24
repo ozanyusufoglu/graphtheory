@@ -1,7 +1,7 @@
 const d3 = require('d3');
 require('../pipes.js');
 var smooth = 1000;
-var period = 1000;
+var period = 100;
 
   var dataset = [{
         foo: 20,
